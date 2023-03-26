@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 const port = 3000
 const db = require("./models")
-const fs = require("fs")
+// const fs = require("fs")
 
 app.get("/", (req, res) => {
   res.send("Hello World!")
@@ -51,9 +51,9 @@ app.listen(port, (err) => {
       alter: true,
     })
 
-    if (!fs.existsSync("public")) {
-      fs.mkdirSync("public")
-    }
+    // if (!fs.existsSync("public")) {
+    //   fs.mkdirSync("public")
+    // }
 
     console.log("APP RUNNING at ".concat(port, " \u2705"))
   }
