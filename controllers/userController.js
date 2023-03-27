@@ -19,15 +19,15 @@ const userController = {
   },
   create: async (req, res) => {
     try {
-      const image = req.file.filename
+      const image = req.file
       const imageSplit = image.split(".")
       const { name, mobile, education, usia } = req.body
 
-      await sharp(`./public/${req.file.filename}`)
+      await sharp(`./public/${req.file}`)
         .resize(500, 500)
         .toFile(`./public/IMAGE1-${imageSplit[0]}.${imageSplit[1]}`)
 
-      await sharp(`./public/${req.file.filename}`)
+      await sharp(`./public/${req.file}`)
         .resize(1000, 1000)
         .toFile(`./public/IMAGE2-${imageSplit[0]}.${imageSplit[1]}`)
 
@@ -54,15 +54,15 @@ const userController = {
   update: async (req, res) => {
     try {
       const { id } = req.params
-      const image = req.file.filename
+      const image = req.file
       const imageSplit = image.split(".")
       const { name, mobile, education, usia } = req.body
 
-      await sharp(`./public/${req.file.filename}`)
+      await sharp(`./public/${req.file}`)
         .resize(500, 500)
         .toFile(`./public/IMAGE1-${imageSplit[0]}.${imageSplit[1]}`)
 
-      await sharp(`./public/${req.file.filename}`)
+      await sharp(`./public/${req.file}`)
         .resize(1000, 1000)
         .toFile(`./public/IMAGE2-${imageSplit[0]}.${imageSplit[1]}`)
 
