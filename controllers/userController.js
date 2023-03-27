@@ -38,8 +38,8 @@ const userController = {
         mobile,
         education,
         usia,
-        image1: image ? `IMAGE1-${imageSplit[0]}.${imageSplit[1]}` : null,
-        image2: image ? `IMAGE2-${imageSplit[0]}.${imageSplit[1]}` : null,
+        image1: req.file ? `IMAGE1-${imageSplit[0]}.${imageSplit[1]}` : null,
+        image2: req.file ? `IMAGE2-${imageSplit[0]}.${imageSplit[1]}` : null,
       })
 
       return res.status(200).json({
