@@ -3,7 +3,7 @@
     "username": "root",
     "password": "password",
     "database": "mobilku_com",
-    "host": "localhost:3306",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
