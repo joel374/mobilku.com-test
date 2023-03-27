@@ -11,7 +11,7 @@ app.use("/user", userRouter)
 app.get("/", (req, res) => {
   res.send("Hello World!")
 })
-const config = JSON.parse(fs.readFileSync("./config.json"))
+const config = JSON.parse(fs.readFileSync("./config/config.json"))
 
 // app.use(express.static(__dirname + "/public"))
 // app.use("/public", express.static("public"))
