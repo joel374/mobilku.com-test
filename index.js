@@ -23,10 +23,10 @@ app.listen(port, (err) => {
     db.sequelize.sync({
       alter: true,
     })
-    if (!fs.existsSync("public")) {
-      fs.mkdirSync("public")
-      fs.mkdtemp("./temp")
-    }
+    // if (!fs.existsSync("public")) {
+    //   // fs.mkdirSync("public")
+    //   fs.mkdtemp("./temp")
+    // }
     console.log("APP RUNNING at ".concat(port, " \u2705"))
   }
 })
