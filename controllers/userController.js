@@ -19,17 +19,19 @@ const userController = {
   },
   create: async (req, res) => {
     try {
-      const image = req.file.filename
-      const imageSplit = image.split(".")
       const { name, mobile, education, usia } = req.body
+      if (req.file) {
+        const image = req.file.filename
+        const imageSplit = image.split(".")
 
-      await sharp(`./public/${req.file.filename}`)
-        .resize(500, 500)
-        .toFile(`./public/IMAGE1-${imageSplit[0]}.${imageSplit[1]}`)
+        await sharp(`./public/${req.file.filename}`)
+          .resize(500, 500)
+          .toFile(`./public/IMAGE1-${imageSplit[0]}.${imageSplit[1]}`)
 
-      await sharp(`./public/${req.file.filename}`)
-        .resize(1000, 1000)
-        .toFile(`./public/IMAGE2-${imageSplit[0]}.${imageSplit[1]}`)
+        await sharp(`./public/${req.file.filename}`)
+          .resize(1000, 1000)
+          .toFile(`./public/IMAGE2-${imageSplit[0]}.${imageSplit[1]}`)
+      }
 
       const result = await db.User.create({
         name,
