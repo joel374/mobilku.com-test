@@ -12,8 +12,8 @@ app.get("/", (req, res) => {
   res.send("Hello World!")
 })
 
-app.use(express.static(__dirname + "./public"))
-app.use("./public", express.static("public"))
+app.use(express.static(__dirname + "/public"))
+app.use("/public", express.static("public"))
 
 app.listen(port, (err) => {
   if (err) {
