@@ -51,9 +51,9 @@ app.listen(port, (err) => {
       alter: true,
     });
 
-    // if (!fs.existsSync("public")) {
-    //   fs.mkdirSync("public");
-    // }
+    if (!fs.existsSync("public")) {
+      fs.mkdirSync("public");
+    }
 
     console.log("APP RUNNING at ".concat(port, " \u2705"));
   }
