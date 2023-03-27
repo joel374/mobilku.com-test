@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "password",
+    "username": "joellegifani",
+    "password": "joel300704",
     "database": "mobilku_com",
-    "host": "127.0.0.1",
+    "host": "db4free.net",
     "dialect": "mysql"
   },
   "test": {
