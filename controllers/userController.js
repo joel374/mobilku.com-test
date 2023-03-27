@@ -8,7 +8,7 @@ const userController = {
 
       return res.status(200).json({
         message: "Find All Users",
-        data: result[0],
+        data: result,
       })
     } catch (error) {
       console.log(error)
