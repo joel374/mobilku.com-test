@@ -12,6 +12,9 @@ app.get("/", (req, res) => {
   res.send("Hello World!")
 })
 
+app.use(express.static(__dirname + "/tmp"))
+app.use("./tmp", express.static("tmp"))
+
 app.listen(port, (err) => {
   if (err) {
     console.log("ERROR: ".concat(err))
